@@ -2,9 +2,6 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 
 export default function Counter() {
-  const [count, setCount] = useState(0);
-  const [stopFlag, setStopFlag] = useState(false);
-
   const Title = styled.h1`
     font-size: 1.5em;
     text-align: center;
@@ -26,9 +23,12 @@ export default function Counter() {
     justify-content: center;
   `;
 
+  const [count, setCount] = useState(0);
+  const [stopFlag, setStopFlag] = useState(false);
+
   useEffect(() => {
     const intervalId = setInterval(() => {
-      if (stopFlag || count === 10) {
+      if (stopFlag || count === 50) {
         return;
       }
       setCount((c) => c + 1); //
