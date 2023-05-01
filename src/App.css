@@ -1,0 +1,16 @@
+/* .counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+.counter h1,
+.counter button {
+  font-size: 10rem;
+}
+
+/* body {
+  height: 100vh;
+  width: 100vw;
+} */
