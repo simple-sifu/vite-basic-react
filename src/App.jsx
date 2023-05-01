@@ -1,53 +1,9 @@
-import { useState, useEffect } from "react";
-import styled from "styled-components";
+import Counter from "./components/Counter.jsx";
 
-export default function Counter() {
-  const [count, setCount] = useState(0);
-  const [stopFlag, setStopFlag] = useState(false);
-
-  // Create a Title component that'll render an <h1> tag with some styles
-  const Title = styled.h1`
-    font-size: 1.5em;
-    text-align: center;
-    color: palevioletred;
-  `;
-
-  // Create a Wrapper component that'll render a <section> tag with some styles
-  const Wrapper = styled.section`
-    display: flex;
-    flex-direction: column;
-    padding: 4em;
-    background: papayawhip;
-  `;
-
-  const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-  `;
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      if (stopFlag || count === 10) {
-        return;
-      }
-      setCount((c) => c + 1); //
-    }, 1000);
-    return () => clearInterval(intervalId);
-  }, [stopFlag, count]);
-
-  const clickHandler = () => {
-    setStopFlag(true);
-  };
-
+export default function App() {
   return (
-    <Container>
-      <Wrapper>
-        <Title>{count}</Title>
-        <button onClick={clickHandler}>STOP</button>
-      </Wrapper>
-    </Container>
+    <div>
+      <Counter />
+    </div>
   );
 }
