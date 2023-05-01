@@ -1,9 +1,9 @@
-import Counter from "./samples/Counter.jsx";
+import ShoppingList from "./samples/ShoppingList";
 
 export default function App() {
   return (
     <div>
-      <Counter />
+      <ShoppingList />
     </div>
   );
 }
