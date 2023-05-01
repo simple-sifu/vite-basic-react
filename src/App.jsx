@@ -1,9 +1,9 @@
-import ShoppingList from "./samples/ShoppingList";
+import Images from "./samples/Images";
 
 export default function App() {
   return (
     <div>
-      <ShoppingList />
+      <Images />
     </div>
   );
 }
